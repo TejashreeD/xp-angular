@@ -1,0 +1,36 @@
+<div>
+    <hr />
+    <label>rest-api-example works!</label><br />
+    <input type="button" value="Counter ++" (click)="counter()" />{{getCount()}}
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <input type="button" value="Request Page 1" (click)="serviceCall(1)" />
+    <input type="button" value="Request Page 2" (click)="serviceCall(2)" />
+    <input type="button" value="Request Page 3" (click)="serviceCall(3)" />
+    <input type="button" value="Request Page 4" (click)="serviceCall(4)" />
+    <table border="2" bgcolor="cyan" *ngIf="this.data !== undefined">
+        <tr>
+            <th>Emp id</th>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Avatar</th>
+        </tr>
+
+        <tr *ngFor="let obj of this.data; index as i;">
+            <td>{{obj.id}}</td>
+            <td>{{obj.email}}</td>
+            <td>{{obj.first_name}}</td>
+            <td>{{obj.last_name}}</td>
+            <td><img src="{{obj.avatar}}" alt="avatar"></td>
+        </tr>
+    </table>
+
+</div>

@@ -1,0 +1,38 @@
+<div>
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)]="empObject.empName" />
+
+    <br>
+    <br>
+    <label>Number:</label>
+    <input type="text" name="number" [(ngModel)]="empObject.empNumber" />
+    <br>
+    <br>
+
+
+    <label>Salary:</label>
+    <input type="text" name="salary" [(ngModel)]="empObject.empSalary" />
+    <br>
+    <br>
+
+    <input type="button" value="Save" (click)="saveEmployee()" /> Hello {{empObject | json}}
+
+    <table border="2" bgcolor="cyan" *ngIf="this.empArray.length">
+        <tr>
+            <th>Emp Numnber</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+
+        <tr *ngFor="let obj of this.empArray; index as i;">
+            <td>{{obj.empNumber}}</td>
+            <td>{{obj.empName}}</td>
+            <td>{{obj.empSalary}}</td>
+            <td><button (click)="updateEmp(i)">Update</button>&nbsp; <button (click)="deleteEmp(i)">Delete</button></td>
+        </tr>
+    </table>
+    <hr />
+    <input type="button" value="Counter ++" (click)="counter();" />{{getCount()}}
+
+</div>

@@ -1,0 +1,14 @@
+<p>comp2 works!</p>
+
+<!-- <button type="button" (click)="showImage(this.imgFlag)" name="Click me!" title="Click Me!">Click Me!</button> -->
+
+ <input type="button" (click)="showImage(this.imgFlag)" name="Click me!"  value="Click me!" >
+
+ <div *ngIf="this.imgFlag">
+    <img height="200px" width="200px" alt="image" src="../assets/ang-logo.png" />
+ </div>
+
+<hr />
+ <div>
+  <app-data></app-data>
+ </div>
