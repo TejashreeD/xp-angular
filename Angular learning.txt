@@ -1,0 +1,41 @@
+https://github.com/vaishali-tapaswi/xpanxion
+
+node installation
+
+visual studio code
+
+
+
+class Employee {
+  public empName: string = '';
+  public empNumber: number = 0;
+  public salary: number = 0.0;
+
+    public salIncrement(salary: number, incrementAmount: number){
+        return salary + incrementAmount;
+    }
+
+}
+
+let emp = new Employee();
+emp.empName = "ABC";
+emp.empNumber = 123;
+console.log(emp.salIncrement(5000, 500));
+
+
+
+
+
+
+
+---------------------------------------
+Trace -> package.json -> angular.json ->
+	1.index.html
+	2. main.ts
+		AppModule -> AppComponent -> css html files
+----------------------------------------
+create a new component
+If u want to call from index.html then add its entry into AppModule -> bootstrap section
+otherwise call them from already bootstraped component like app.component html with the help of app selector like <comp2></comp2>.
+
+[] used to send data from component to view without evaluating
