@@ -1,0 +1,44 @@
+<!-- <div>
+    Name <input type='text' [(ngModel)]="name" /><br /> Marks <input type='number' [(ngModel)]="marks" /><br />
+    <h1>
+        App componet current name = {{this.name}} and marks = {{this.marks}}
+    </h1>
+    <app-second marks='{{marks}}' (invalidMarks)="handler($event)"></app-second>
+    <h2><span style="color: red">{{ this.error !== undefined? this.error : '' }}</span></h2>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <header>
+        <h2>Cities {{title}}</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a [routerLink]="['/Form1']" routerLinkActive="router-link-active">form1</a></li>
+                <li><a [routerLink]="['/Form1/10']" routerLinkActive="router-link-active">form1</a></li>
+                <li><a [routerLink]="['/Form1/300']" routerLinkActive="router-link-active">form1</a></li>
+                <li><a [routerLink]="['/Form2']" routerLinkActive="router-link-active">Form2</a></li>
+                <li><a [routerLink]="['/Display']" routerLinkActive="router-link-active">Display</a></li>
+                <li><a [routerLink]="['/first/comp1']" routerLinkActive="router-link-active">comp1</a></li>
+                <li><a [routerLink]="['/first/comp2']" routerLinkActive="router-link-active">comp2</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Angular Routes</h1>
+            <router-outlet></router-outlet>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+
+</html>

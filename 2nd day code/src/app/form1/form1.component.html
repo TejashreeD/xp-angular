@@ -1,0 +1,17 @@
+<!-- <p>form1 works!</p>
+{{params}}
+
+<input type="button" value="Redirect Me!" (click)='redirectMe()' /> -->
+
+<form [formGroup]="myForm">
+    <label>
+        Name:
+        <input type="text" formControlName="namecn">
+    </label>
+    <p>
+        Value: {{ name.value }}
+    </p>
+    <p>
+        <button (click)="updateName()" [disabled]="!myForm.valid">Update Name</button>
+    </p>
+</form>
